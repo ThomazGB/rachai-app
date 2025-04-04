@@ -6,19 +6,14 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
+import { useRouter, usePathname } from 'expo-router';
 import { useColorScheme } from '@/components/useColorScheme';
+import { getItem } from '@/constants/storage';
 
 export {
-  // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
 
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -27,7 +22,6 @@ export default function RootLayout() {
     ...FontAwesome.font,
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
@@ -48,11 +42,35 @@ export default function RootLayout() {
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const checkAuth = async () => {
+    console.log("teste");
+    const user = JSON.parse(await getItem("user") || "null");
+    if (!user) {
+      if (
+        pathname !== "/auth/login" &&
+        !pathname.startsWith("/auth")
+      ) {
+        router.replace("/auth/login");
+      }
+    } else if (pathname !== "/home") {
+      router.replace("/home");
+    }
+  };
+  
+  useEffect(() => {
+    checkAuth();
+  }, [pathname]);
+
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="/" options={{ headerShown: false }} />
+        <Stack.Screen name="/auth/loading" options={{ headerShown: false }} />
+        <Stack.Screen name="/auth/login" options={{ headerShown: false }} />
+        <Stack.Screen name="/home" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );
