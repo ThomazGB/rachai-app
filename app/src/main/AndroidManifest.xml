@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rachai_mobile_front">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="rachai_mobile_front"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Rachai_mobile_front"
+        tools:targetApi="31">
+
+        <activity android:name=".activities.CadastroViagemActivity" />
+        <activity android:name=".activities.MinhasViagensActivity" />
+        <activity android:name=".activities.DetalhesViagemActivity" />
+        <activity android:name=".activities.AvaliacaoActivity" />
+        <activity android:name=".activities.AvaliacoesActivity" />
+        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.ListaViagensActivity" />
+        <activity android:name=".activities.NovaViagemActivity" />
+        <activity android:name=".activities.PagamentosActivity" />
+        <activity android:name=".activities.ParticipantesActivity" />
+        <activity android:name=".activities.PerfilActivity" />
+        <activity android:name=".activities.EditarViagemActivity" />
+        <activity android:name=".activities.CadastroUsuarioActivity" />
+
+
+        <!-- Definindo a Main Activity com exported="true" -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

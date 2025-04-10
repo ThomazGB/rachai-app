@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvBemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo(a), [Usuário]!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnNovaViagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nova Viagem"/>
+
+    <Button
+        android:id="@+id/btnMinhasViagens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minhas Viagens"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meu Perfil"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTituloDetalhes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalhes da Viagem"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvOrigem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Origem:"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvValorOrigem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destino:"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvValorDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data:"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvValorData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvMotorista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motorista:"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvValorMotorista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Viagem"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Participantes"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#009688"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
