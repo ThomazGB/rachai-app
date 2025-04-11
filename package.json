@@ -40,6 +40,6 @@
     "typescript": "~5.3.3"
   },
   "private": true,
-  "name": "nome-do-projeto",
+  "name": "rachai-app",
   "version": "1.0.0"
 }
